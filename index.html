@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="متجر Horizon 3D Store لمستلزمات الطباعة ثلاثية الأبعاد في العراق">
+  <title>Horizon 3D Store | عالم الطباعة ثلاثية الأبعاد</title>
+  <link rel="stylesheet" href="style.css?v=20260815-card-meta-2">
+</head>
+<body class="intro-active">
+  <div class="store-intro" id="storeIntro" role="status" aria-label="Horizon 3D Store">
+    <div class="intro-space" aria-hidden="true">
+      <span class="intro-orbit intro-orbit-one"></span>
+      <span class="intro-orbit intro-orbit-two"></span>
+      <span class="intro-glow"></span>
+      <div class="intro-logo-card">
+        <img src="https://hgghh.b-cdn.net/uploads/WhatsApp%20Image%202026-08-03%20at%205.30.29%20PM.jpeg" alt="">
+      </div>
+      <span class="intro-floor"></span>
+    </div>
+  </div>
+  <script>
+    (() => {
+      const intro = document.getElementById("storeIntro");
+      const finishIntro = () => {
+        document.body.classList.remove("intro-active");
+        if (intro) intro.remove();
+      };
+      if (intro) intro.addEventListener("animationend", finishIntro, { once: true });
+      window.setTimeout(finishIntro, 4900);
+    })();
+  </script>
+  <div class="announcement">توصيل إلى جميع محافظات العراق · الدفع عند الاستلام</div>
+
+  <header class="site-header">
+    <div class="header-main container">
+      <a class="brand" href="#home" aria-label="Horizon 3D Store الرئيسية">
+        <img class="brand-logo brand-logo-header" src="https://hgghh.b-cdn.net/uploads/WhatsApp%20Image%202026-08-03%20at%205.30.29%20PM.jpeg" alt="Horizon 3D Store" decoding="async">
+      </a>
+
+      <form class="search" id="searchForm" role="search">
+        <input id="searchInput" type="search" placeholder="ابحث عن طابعة، فلامنت، ريزن..." aria-label="بحث في المنتجات">
+        <button type="submit" aria-label="بحث">⌕</button>
+      </form>
+
+      <div class="header-actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="تغيير المظهر">☾</button>
+        <button class="icon-btn" id="wishlistBtn" type="button" aria-label="المفضلة">♡<span class="badge" id="wishCount">0</span></button>
+        <button class="cart-button" id="cartBtn" type="button"><span>السلة</span> 🛒 <b id="cartCount">0</b></button>
+        <button class="mobile-toggle" id="mobileToggle" type="button" aria-label="فتح القائمة">☰</button>
+      </div>
+    </div>
+
+    <nav class="main-nav" id="mainNav" aria-label="القائمة الرئيسية">
+      <div class="container nav-links">
+        <a href="#categories">جميع الفئات</a>
+        <span class="dynamic-nav-categories" id="navCategoryLinks"></span>
+        <a href="#print-service">خدمة الطباعة</a>
+        <a href="#contact">تواصل معنا</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="hero-grid hero-single container">
+        <div class="hero-copy">
+          <span class="eyebrow">تقنية تصنع أفكارك</span>
+          <h1>كل ما تحتاجه لتبدأ<br><em>الطباعة ثلاثية الأبعاد</em></h1>
+          <p>طابعات أصلية، مواد موثوقة، قطع غيار ودعم حقيقي من فريق يفهم شغلك.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#products">تسوّق الآن <span>←</span></a>
+            <a class="btn ghost" href="#print-service">خدمة الطباعة</a>
+          </div>
+          <div class="trust-row">
+            <span>✓ ضمان حقيقي</span><span>✓ شحن سريع</span><span>✓ دعم فني</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="feature-strip container" aria-label="مزايا المتجر">
+      <article><span>🚚</span><div><b>توصيل لكل العراق</b><small>تغليف آمن وسريع</small></div></article>
+      <article><span>🛡️</span><div><b>منتجات مضمونة</b><small>مصادر موثوقة</small></div></article>
+      <article><span>💬</span><div><b>دعم قبل وبعد البيع</b><small>نساعدك بالاختيار</small></div></article>
+      <article><span>💵</span><div><b>دفع عند الاستلام</b><small>بكل سهولة وأمان</small></div></article>
+    </section>
+
+    <section class="section container" id="categories">
+      <div class="section-heading">
+        <div><span class="eyebrow">اختصر الطريق</span><h2>تسوّق حسب الفئة</h2></div>
+        <a href="#products">عرض كل المنتجات ←</a>
+      </div>
+      <div class="category-grid" id="categoryGrid">
+        <button class="category-card active" data-category="all"><span class="category-icon icon-all">✦</span><b>الكل</b><small>منتجات مختارة</small></button>
+      </div>
+    </section>
+
+    <section class="section products-section" id="products">
+      <div class="container">
+        <div class="section-heading">
+          <div><span class="eyebrow">الأكثر طلباً</span><h2>منتجات مختارة لك</h2></div>
+          <div class="product-controls">
+            <select id="sortSelect" aria-label="ترتيب المنتجات">
+              <option value="featured">الأبرز</option>
+              <option value="price-asc">السعر: الأقل</option>
+              <option value="price-desc">السعر: الأعلى</option>
+              <option value="rating">الأعلى تقييماً</option>
+            </select>
+          </div>
+        </div>
+        <div class="active-filter" id="activeFilter" hidden></div>
+        <div class="product-grid" id="productGrid"></div>
+        <div class="load-more-wrap" id="loadMoreWrap" hidden>
+          <button class="load-more-btn" id="loadMoreBtn" type="button"><span>عرض المزيد</span><small id="remainingCount"></small><b>↓</b></button>
+        </div>
+        <div class="empty-state" id="emptyState" hidden><span>⌕</span><h3>ما لقينا نتائج</h3><p>جرّب كلمة أو فئة ثانية.</p></div>
+      </div>
+    </section>
+
+    <section class="print-service" id="print-service">
+      <div class="container service-grid">
+        <div class="service-copy">
+          <span class="eyebrow light">خدمة الطباعة حسب الطلب</span>
+          <h2>عندك فكرة؟<br>نحوّلها إلى <em>قطعة حقيقية.</em></h2>
+          <p>تواصل معنا، أخبرنا عن فكرتك واختر المادة واللون، وسيصلك عرض السعر خلال 24 ساعة.</p>
+          <div class="service-stats"><span><b>0.05mm</b><small>دقة الطباعة</small></span><span><b>30+</b><small>لون متوفر</small></span><span><b>24h</b><small>عرض السعر</small></span></div>
+        </div>
+        <div class="request-card">
+          <div class="request-icon">⌁</div>
+          <h3>اطلب استشارة طباعة</h3>
+          <p>فريقنا يساعدك في اختيار المادة واللون والمقاس المناسب.</p>
+          <a class="btn primary" href="#contact">تواصل معنا</a>
+          <small>نرد عليك خلال أوقات العمل.</small>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-about"><a class="brand" href="#home"><img class="brand-logo brand-logo-footer" src="https://hgghh.b-cdn.net/uploads/WhatsApp%20Image%202026-08-03%20at%205.30.29%20PM.jpeg" alt="Horizon 3D Store" loading="lazy" decoding="async"></a><p>متجر عراقي متخصص بالطباعة ثلاثية الأبعاد، من أول فكرة إلى أول قطعة.</p><a class="whatsapp" href="https://wa.me/9647721425703" target="_blank" rel="noopener">واتساب: <bdi dir="ltr">+964 772 142 5703</bdi></a></div>
+      <div><h4>المتجر</h4><a href="#products">كل المنتجات</a><a href="#categories">الفئات</a><a href="#print-service">خدمة الطباعة</a></div>
+      <div><h4>المساعدة</h4><a href="#contact">تواصل معنا</a><a href="#">الشحن والتوصيل</a><a href="#">الاستبدال والاسترجاع</a></div>
+      <div><h4>ساعات العمل</h4><p>السبت – الخميس<br>10:00 ص – 8:00 م</p><p>بغداد، العراق</p></div>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 Horizon 3D Store. جميع الحقوق محفوظة.</span><span>صُمم بحب للمبدعين العراقيين ♡</span></div>
+  </footer>
+
+  <aside class="drawer" id="cartDrawer" aria-hidden="true" aria-label="سلة التسوق">
+    <div class="drawer-head"><div><small>مشترياتك</small><h2>سلة التسوق</h2></div><button id="closeCart" type="button" aria-label="إغلاق">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-empty" id="cartEmpty"><span>🛒</span><h3>سلتك فارغة</h3><p>أضف منتجاً وستجده هنا.</p></div>
+    <div class="cart-footer" id="cartFooter" hidden>
+      <div class="cart-summary-row"><span>مجموع المنتجات</span><b id="cartSubtotal">0 د.ع</b></div>
+      <div class="cart-summary-row shipping-row"><span>كلفة التوصيل</span><b id="shippingCost">5,000 د.ع</b></div>
+      <div class="cart-summary-row grand-total"><span>المجموع الكلي مع التوصيل</span><b id="cartTotal">0 د.ع</b></div>
+      <button class="btn primary checkout-btn" id="checkoutBtn">إكمال الطلب</button>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+
+  <dialog class="product-modal" id="productModal">
+    <button class="modal-close" id="modalClose" type="button" aria-label="إغلاق">×</button>
+    <div id="modalContent"></div>
+  </dialog>
+
+  <dialog class="checkout-dialog" id="checkoutModal">
+    <button class="modal-close" id="checkoutClose" type="button" aria-label="إغلاق">×</button>
+    <div class="checkout-head">
+      <span class="checkout-mark">✓</span>
+      <small>خطوة أخيرة</small>
+      <h2>معلومات إكمال الطلب</h2>
+      <p>أدخل معلوماتك بدقة حتى يتمكن فريقنا من مراجعة الطلب والتواصل معك.</p>
+    </div>
+    <form class="checkout-form" id="checkoutForm" novalidate>
+      <label class="form-field">
+        <span>الاسم الكامل <b>*</b></span>
+        <div class="field-control"><i>👤</i><input id="customerName" name="customerName" type="text" autocomplete="name" placeholder="مثال: أحمد محمد" required></div>
+        <small class="field-error" id="nameError"></small>
+      </label>
+      <label class="form-field">
+        <span>رقم الهاتف <b>*</b></span>
+        <div class="field-control ltr-field"><i>☎</i><input id="customerPhone" name="customerPhone" type="tel" inputmode="numeric" autocomplete="tel" maxlength="11" placeholder="07XXXXXXXXX" required></div>
+        <small class="field-hint">يجب أن يتكون من 11 رقماً</small>
+        <small class="field-error" id="phoneError"></small>
+      </label>
+      <label class="form-field full-field">
+        <span>العنوان بالتفصيل <b>*</b></span>
+        <div class="field-control textarea-control"><i>⌖</i><textarea id="customerAddress" name="customerAddress" rows="3" placeholder="المنطقة، الحي، الشارع، أقرب نقطة دالة" required></textarea></div>
+        <small class="field-error" id="addressError"></small>
+      </label>
+      <label class="form-field full-field">
+        <span>المحافظة <b>*</b></span>
+        <div class="field-control select-control"><i>◆</i><select id="customerGovernorate" name="customerGovernorate" required>
+          <option value="">اختر المحافظة</option>
+          <option>بغداد</option><option>البصرة</option><option>نينوى</option><option>أربيل</option><option>النجف</option>
+          <option>كربلاء</option><option>كركوك</option><option>الأنبار</option><option>بابل</option><option>ديالى</option>
+          <option>دهوك</option><option>السليمانية</option><option>صلاح الدين</option><option>واسط</option><option>ذي قار</option>
+          <option>ميسان</option><option>المثنى</option><option>القادسية</option><option>حلبجة</option>
+        </select></div>
+        <small class="field-error" id="governorateError"></small>
+      </label>
+      <div class="checkout-total"><span>الإجمالي مع التوصيل</span><b id="checkoutOrderTotal">0 د.ع</b></div>
+      <button class="confirm-order-btn" type="submit"><span><small>إرسال للمراجعة</small>تأكيد الطلب</span><b>←</b></button>
+    </form>
+  </dialog>
+
+  <dialog class="success-dialog" id="successDialog">
+    <button class="modal-close" id="successClose" type="button" aria-label="إغلاق">×</button>
+    <div class="success-animation"><span>✓</span></div>
+    <small>تم بنجاح</small>
+    <h2>تم إرسال الطلب لقسم المراجعة</h2>
+    <p>سيقوم فريق Horizon 3D Store بمراجعة طلبك والتواصل معك. هل تود تذكيرهم عبر واتساب؟</p>
+    <div class="order-reference">رقم الطلب: <b id="orderReference"></b></div>
+    <a class="whatsapp-order-btn" id="whatsappAdmin" href="https://wa.me/9647721425703" target="_blank" rel="noopener"><span>الانتقال إلى واتساب الإدارة</span><b>◉</b></a>
+    <button class="later-btn" id="successLater" type="button">لاحقاً</button>
+  </dialog>
+
+  <dialog class="profile-dialog" id="profileModal">
+    <button class="modal-close" id="profileClose" type="button" aria-label="إغلاق">×</button>
+    <div class="profile-head">
+      <div class="profile-avatar">👤</div>
+      <div><small>حساب الزبون</small><h2>البروفايل والإعدادات</h2><p>احفظ معلوماتك مرة واحدة لتظهر تلقائياً عند كل طلب.</p></div>
+    </div>
+    <form class="profile-form" id="profileForm" novalidate>
+      <div class="profile-section-title"><span>01</span><div><h3>معلومات التوصيل</h3><p>تُحفظ على هذا الجهاز فقط.</p></div></div>
+      <div class="profile-fields">
+        <label class="form-field"><span>الاسم الكامل <b>*</b></span><div class="field-control"><i>👤</i><input id="profileName" type="text" placeholder="الاسم الكامل"></div><small class="field-error" id="profileNameError"></small></label>
+        <label class="form-field"><span>رقم الهاتف <b>*</b></span><div class="field-control ltr-field"><i>☎</i><input id="profilePhone" type="tel" inputmode="numeric" maxlength="11" placeholder="07XXXXXXXXX"></div><small class="field-error" id="profilePhoneError"></small></label>
+        <label class="form-field full-field"><span>العنوان <b>*</b></span><div class="field-control textarea-control"><i>⌖</i><textarea id="profileAddress" rows="2" placeholder="المنطقة، الحي، الشارع"></textarea></div><small class="field-error" id="profileAddressError"></small></label>
+        <label class="form-field"><span>أقرب نقطة دالة</span><div class="field-control"><i>◎</i><input id="profileLandmark" type="text" placeholder="مثال: قرب المدرسة"></div></label>
+        <label class="form-field"><span>المحافظة <b>*</b></span><div class="field-control select-control"><i>◆</i><select id="profileGovernorate">
+          <option value="">اختر المحافظة</option>
+          <option>بغداد</option><option>البصرة</option><option>نينوى</option><option>أربيل</option><option>النجف</option><option>كربلاء</option><option>كركوك</option><option>الأنبار</option><option>بابل</option><option>ديالى</option><option>دهوك</option><option>السليمانية</option><option>صلاح الدين</option><option>واسط</option><option>ذي قار</option><option>ميسان</option><option>المثنى</option><option>القادسية</option><option>حلبجة</option>
+        </select></div><small class="field-error" id="profileGovernorateError"></small></label>
+      </div>
+      <button class="save-profile-btn" type="submit"><span>حفظ معلوماتي</span><b>✓</b></button>
+      <button class="clear-profile-btn" id="clearProfile" type="button" style="display:block;margin:15px auto 0;border:0;background:transparent;color:var(--muted);font-size:9px;text-decoration:underline;cursor:pointer">مسح المعلومات المحفوظة</button>
+
+      <div class="profile-section-title theme-title"><span>02</span><div><h3>مظهر المتجر</h3><p>اختر الثيم الذي يناسبك.</p></div></div>
+      <div class="theme-grid" id="themeGrid">
+        <button type="button" data-theme-choice="dark"><i class="theme-preview dark-preview"></i><span>ليلي</span><b>☾</b></button>
+        <button type="button" data-theme-choice="light"><i class="theme-preview light-preview"></i><span>نهاري</span><b>☀</b></button>
+        <button type="button" data-theme-choice="solar"><i class="theme-preview solar-preview"></i><span>شمسي</span><b>◉</b></button>
+        <button type="button" data-theme-choice="purple"><i class="theme-preview purple-preview"></i><span>بنفسجي</span><b>✦</b></button>
+        <button type="button" data-theme-choice="sky"><i class="theme-preview sky-preview"></i><span>سمائي</span><b>☁</b></button>
+        <button type="button" data-theme-choice="emerald"><i class="theme-preview emerald-preview"></i><span>زمردي</span><b>◆</b></button>
+        <button type="button" data-theme-choice="rose"><i class="theme-preview rose-preview"></i><span>وردي</span><b>♡</b></button>
+      </div>
+
+      <div class="support-card">
+        <div class="support-icon">◉</div>
+        <div><small>تحتاج مساعدة؟</small><h3>فريق الدعم قريب منك</h3><p>تواصل مباشرة مع إدارة Horizon 3D Store عبر واتساب.</p></div>
+        <a href="https://wa.me/9647721425703" target="_blank" rel="noopener"><span>واتساب الدعم</span><b>←</b></a>
+      </div>
+      <a class="developer-link" href="https://t.me/am_an12" target="_blank" rel="noopener" aria-label="التواصل مع المطور على تلغرام"><span>✈</span> المطور</a>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <button class="back-top" id="backTop" type="button" aria-label="العودة للأعلى">↑</button>
+
+  <nav class="bottom-dock" aria-label="التنقل السريع">
+    <button class="dock-item dock-cart" id="bottomCart" type="button" aria-label="فتح السلة">
+      <span class="dock-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.1 10.1a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 1.9-1.4L21 7H6M9.5 20a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm7 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z"/></svg><b id="bottomCartCount">0</b></span>
+      <small>السلة</small>
+    </button>
+    <button class="dock-item dock-favorites" id="bottomFavorites" type="button" aria-label="فتح المفضلات">
+      <span class="dock-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><b id="bottomWishCount">0</b></span>
+      <small>المفضلات</small>
+    </button>
+    <a class="dock-item dock-home active" href="#home" aria-label="الرئيسية">
+      <span class="home-orbit"><span class="dock-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1v-9Z"/></svg></span></span>
+      <small>الرئيسية</small>
+    </a>
+    <button class="dock-item dock-categories" id="bottomCategories" type="button" aria-label="فتح الفئات">
+      <span class="dock-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6v6H4V4Zm10 0h6v6h-6V4ZM4 14h6v6H4v-6Zm10 0h6v6h-6v-6Z"/></svg></span>
+      <small>الفئات</small>
+    </button>
+    <button class="dock-item dock-profile" id="bottomProfile" type="button" aria-label="فتح البروفايل">
+      <span class="dock-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm8 9a8 8 0 0 0-16 0"/></svg></span>
+      <small>البروفايل</small>
+    </button>
+  </nav>
+
+  <style>
+    .bottom-dock{width:min(500px,calc(100% - 28px));grid-template-columns:repeat(5,1fr)}
+    .dock-cart{grid-column:1}.dock-favorites{grid-column:2}.dock-home{grid-column:3}.dock-categories{grid-column:4}.dock-profile{grid-column:5}
+    .dock-favorites .dock-icon b{position:absolute;top:-8px;left:-8px;min-width:19px;height:19px;display:grid;place-items:center;padding:0 5px;background:var(--primary);color:#1c1408;border:2px solid var(--surface);border-radius:10px;font-size:9px}
+    .product-card{cursor:pointer}.modal-actions{display:flex;gap:9px;margin-top:18px}.modal-actions .btn{flex:1;padding:0 12px}.modal-back{border:1px solid var(--line);background:var(--surface-2);color:var(--ink)}.modal-back:hover{border-color:var(--primary);color:var(--primary);transform:translateY(-2px)}
+    @media(max-width:640px){.bottom-dock{padding-inline:8px}.dock-item small{font-size:8px}.modal-actions{flex-direction:column}}
+  </style>
+
+  <script type="module" src="script.js?v=20260815-card-meta-2"></script>
+</body>
+</html>
